@@ -1,0 +1,60 @@
+#induction
+induction n,induction k
+induction H,induction IHn
+induction H0,induction H1
+
+#Even
+eapply ev_0,eapply ev_SS,eapply odd_S,eapply ev_sum
+
+#eapply
+eapply le_n,eapply le_mult_trans,eapply mult_le_compat,eapply mult_1_l
+eapply f_equal,eapply f_equal2,eapply mult_comm,eapply gt_le_S,eapply mult_ge_1,apply conj
+eapply left,eapply right
+
+#Hypothesis
+eapply H,eapply H0,eapply H1,eapply IHn,eapply IHk
+exact H,exact H0,exact H1,exact IHn,exact IHk
+inversion H,inversion IHn,inversion IHk
+inversion H0,inversion H1
+rewrite H,rewrite H0,rewrite H1,rewrite IHn,rewrite IHk
+assumption,reflexivity
+
+#lt
+eapply lt_irrefl,eapply lt_le_S,eapply lt_n_Sm_le,eapply le_lt_n_Sm,eapply le_not_lt,eapply lt_not_le
+eapply lt_asym,eapply lt_n_Sn,eapply lt_S,eapply lt_n_S,eapply lt_S_n,eapply lt_0_Sn,eapply lt_n_0
+eapply S_pred,eapply lt_pred,eapply lt_pred_n_n,eapply lt_trans,eapply lt_le_trans,eapply le_lt_trans
+eapply le_lt_or_eq,eapply le_lt_or_eq_iff,eapply lt_le_weak,eapply le_or_lt,eapply nat_total_order
+eapply neq_0_lt,eapply lt_0_neq,eapply lt_O_neq,eapply lt_O_fact
+
+#le
+eapply le_n,eapply le_S,eapply le_refl,eapply le_trans,eapply le_0_n,eapply le_Sn_0,eapply le_n_0_eq
+eapply le_n_S,eapply le_n_Sn,eapply le_Sn_le,eapply le_S_n,eapply le_Sn_n,eapply le_pred_n,eapply le_pred
+eapply le_antisym,eapply le_elim_rel
+
+
+#gt
+eapply gt_Sn_0,eapply gt_Sn_n,eapply gt_n_S,eapply gt_S_n,eapply gt_S,eapply gt_pred,eapply gt_irref1
+eapply gt_asym,eapply le_not_gt,eapply gt_not_le,eapply le_S_gt,eapply gt_S_le,eapply gt_le_S,eapply le_gt_S
+eapply le_gt_trans,eapply gt_le_trans,eapply gt_trans,eapply gt_trans_S,eapply gt_0_eq
+eapply plus_gt_reg_l,eapply plus_gt_compat_l
+
+#mult
+rewrite <- mult_0_r,rewrite -> mult_0_r,rewrite <- mult_0_l,rewrite -> mult_0_l
+rewrite <- mult_0_r at 1,rewrite -> mult_0_r at 1,rewrite <- mult_0_l at 1,rewrite -> mult_0_l at 1
+rewrite <- mult_1_r,rewrite -> mult_1_r,rewrite <- mult_1_l,rewrite -> mult_1_l
+rewrite <- mult_1_r at 1,rewrite -> mult_1_r at 1,rewrite <- mult_1_l at 1,rewrite -> mult_1_l at 1
+rewrite <- mult_le_compat,rewrite -> mult_le_compat,rewrite -> mult_assoc,rewrite -> mult_assoc
+rewrite <- mult_plus_distr_r,rewrite -> mult_plus_distr_r,rewrite <- mult_plus_distr_l,rewrite -> mult_plus_distr_l
+
+#plus
+rewrite <- plus_0_r,rewrite -> plus_0_r,rewrite <- plus_1_r,rewrite -> plus_1_r
+rewrite <- plus_assoc,rewrite -> plus_assoc
+rewrite <- plus_n_O,rewrite -> plus_n_O,rewrite <- plus_O_n,rewrite -> plus_O_n
+rewrite <- plus_n_Sm,rewrite -> plus_n_Sm,rewrite <- plus_Sn_m,rewrite -> plus_Sn_m
+
+#others
+
+#unfold gt,unfold lt
+
+#unrepeatable tactics
+simpl,trivial,rewrite plus_comm,rewrite mult_comm,eapply sym_not_eq,eapply eq_sym
