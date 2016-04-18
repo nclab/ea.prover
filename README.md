@@ -58,4 +58,4 @@ Use
 
 Please cite
 
-> Yang, L.-A., Liu, J.-B., Chen, C.-H., & Chen, Y.-p. (2016). Automatically Proving Mathematical Theorems with Evolutionary Algorithms and Proof Assistants. ([arXiv:1602.07455](http://arxiv.org/abs/1602.07455)). Submitted to <I>2016 IEEE Congress on Evolutionary Computation (CEC 2016), part of 2016 IEEE World Congress on Computational Intelligence (IEEE WCCI 2016)</I>.
+> Yang, L.-A., Liu, J.-P., Chen, C.-H., & Chen, Y.-p. (2016). Automatically Proving Mathematical Theorems with Evolutionary Algorithms and Proof Assistants. ([arXiv:1602.07455](http://arxiv.org/abs/1602.07455)). Accepted by <I>2016 IEEE Congress on Evolutionary Computation (CEC 2016), part of 2016 IEEE World Congress on Computational Intelligence (IEEE WCCI 2016)</I>.
